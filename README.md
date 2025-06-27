@@ -9,7 +9,7 @@ A robust, production-grade bi-directional OSC controller for Wekinator, implemen
 - Dynamic parameterisation of inputs, models, and names
 - DTW gesture recording and event handling
 - Realtime Wekinator output parsing
-- Idiot-proof UI for all common workflows
+- User-friendly UI for all common workflows
 - No dependencies, no external Python modules
 
 ## Requirements
