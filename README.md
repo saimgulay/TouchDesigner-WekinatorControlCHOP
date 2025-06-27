@@ -49,7 +49,7 @@ Attribution required if forked or integrated into larger tools. See LICENSE file
 ---
 
 
-## TouchDesigner Wekinator Pro Controller — User Manual
+## TouchDesigner Wekinator Controller — User Manual
 
 **Version:** 1.0
 **Author:** [@saimgulay](https://github.com/saimgulay)
@@ -74,6 +74,7 @@ It replaces manual GUI interactions in Wekinator and eliminates the need for ext
 
 ## 2. Installation
 
+0. Clone this repository
 1. Open your TouchDesigner project.  
 2. Create a new **Script CHOP**.  
 3. Paste the full Python script into the **Callbacks DAT** of the Script CHOP.  
