@@ -46,6 +46,9 @@ MIT License.
 Attribution required if forked or integrated into larger tools. See LICENSE file.
 
 
+---
+
+
 ## TouchDesigner Wekinator Pro Controller — User Manual
 
 **Version:** 1.0
