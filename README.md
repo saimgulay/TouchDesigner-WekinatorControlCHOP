@@ -1,4 +1,4 @@
-# TouchDesigner–Wekinator Pro Controller
+# TouchDesigner–Wekinator Controller
 
 A robust, production-grade bi-directional OSC controller for Wekinator, implemented as a single Script CHOP for TouchDesigner. Enables full control and monitoring of Wekinator’s training and inference process, replacing manual GUI interaction.
 
