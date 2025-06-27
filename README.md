@@ -2,6 +2,15 @@
 
 A robust, production-grade bi-directional OSC controller for Wekinator, implemented as a single Script CHOP for TouchDesigner. Enables full control and monitoring of Wekinator’s training and inference process, replacing manual GUI interaction.
 
+## What is TouchDesigner?
+
+[TouchDesigner](https://derivative.ca/) is a node-based visual programming environment developed by Derivative, primarily used for real-time interactive media systems. It is widely employed in audiovisual installations, live performances, and immersive interface design due to its flexibility, low-latency processing, and extensive I/O capabilities.
+
+## What is Wekinator?
+
+[Wekinator](http://www.wekinator.org/) is an interactive machine learning software developed by Rebecca Fiebrink. It allows users to build real-time ML models by receiving input via OSC and training them on-the-fly using supervised learning techniques. Wekinator is commonly used in creative coding, gesture recognition, and HCI research.
+
+
 ## Features
 
 - Fully socket-based OSC communication (UDP)
