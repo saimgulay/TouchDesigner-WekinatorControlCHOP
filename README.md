@@ -52,7 +52,8 @@ Attribution required if forked or integrated into larger tools. See LICENSE file
 ## TouchDesigner Wekinator Pro Controller — User Manual
 
 **Version:** 1.0
-**Author:** @saimgulay 
+**Author:** [@saimgulay](https://github.com/saimgulay)
+
 **Compatibility:** TouchDesigner 2022.3+  
 **Tested with:** Wekinator v1.0.1 on macOS & Windows  
 **OSC Standard:** Compliant with Open Sound Control (UDP-based)
