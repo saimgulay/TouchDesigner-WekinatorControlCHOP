@@ -79,20 +79,9 @@ This Script CHOP enables two-way, socket-level communication between TouchDesign
 
 It replaces manual GUI interactions in Wekinator and eliminates the need for external OSC tools (e.g. Max/MSP, Processing).
 
----
 
-## 2. Installation
 
-0. Clone this repository
-1. Open your TouchDesigner project.  
-2. Create a new **Script CHOP**.  
-3. Paste the full Python script into the **Callbacks DAT** of the Script CHOP.  
-4. Let it compile without errors.  
-5. Click the Script CHOP to initialise parameters and connections.
-
----
-
-## 3. Parameters Overview
+## 2. Parameters Overview
 
 ### General
 - **Sample Rate:** Output rate of the CHOP (Hz).  
@@ -137,7 +126,7 @@ It replaces manual GUI interactions in Wekinator and eliminates the need for ext
 
 ---
 
-## 4. How It Works (Execution Flow)
+## 3. How It Works (Execution Flow)
 
 - A UDP socket is created on the TouchDesigner side.  
 - A background thread (`recv_loop()`) listens for Wekinator output.  
@@ -147,14 +136,14 @@ It replaces manual GUI interactions in Wekinator and eliminates the need for ext
 
 ---
 
-## 5. Usage Recommendations
+## 4. Usage Recommendations
 
 ### Initial Setup:
 - Ensure Wekinator is running with *Enable OSC Control of GUI* checked.  
 - Avoid changing ports once training starts.  
 - Match input/output counts between Wekinator and the script.
 
-### Live Usage:
+### 5. Live Usage:
 - Use **Every Frame** mode for real-time prediction.  
 - Use **On Pulse** mode during testing or data collection.  
 - Avoid toggling multiple parameters at once.  
