@@ -37,7 +37,7 @@ A robust, production-grade bi-directional OSC controller for Wekinator, implemen
 5. Start Wekinator and enable “OSC Control of GUI”.
 6. Use toggle/pulse parameters to control and monitor in real time.
 
-> For complete usage instructions, see the full manual included below.
+> For more information on parameters, see below. 
 
 ## File Structure
 
