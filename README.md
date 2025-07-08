@@ -44,6 +44,7 @@ A robust, production-grade bi-directional OSC controller for Wekinator, implemen
 - `script1_callbacks`: Core implementation (single file, fully self-contained)
 - No external assets, modules, or operator dependencies
 
+For more details, see [Wiki](https://github.com/saimgulay/TouchDesigner-WekinatorControlCHOP/wiki/Wekinator-Control-CHOP) page of this repository.
 ## Status
 
 This controller is **stable** and used in professional HCI/XR prototyping.  
