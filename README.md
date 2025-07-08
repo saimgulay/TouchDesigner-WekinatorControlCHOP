@@ -249,7 +249,10 @@ This section showcases key UI screens and integration points of the TouchDesigne
 ![Screenshot 7](images/7.png)
 
 
-## HUMAN-COMPUTER INTERACTION LENS
+---
+## White-paper
+---
+
 
 # TouchDesigner ⇄ Wekinator OSC Controller
 
