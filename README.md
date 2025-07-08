@@ -37,14 +37,13 @@ A robust, production-grade bi-directional OSC controller for Wekinator, implemen
 5. Start Wekinator and enable “OSC Control of GUI”.
 6. Use toggle/pulse parameters to control and monitor in real time.
 
-> For more information on parameters, see below. 
+> For more information on parameters, see [Wiki](https://github.com/saimgulay/TouchDesigner-WekinatorControlCHOP/wiki/Wekinator-Control-CHOP) page of this repository.
 
 ## File Structure
 
 - `script1_callbacks`: Core implementation (single file, fully self-contained)
 - No external assets, modules, or operator dependencies
 
-For more details, see [Wiki](https://github.com/saimgulay/TouchDesigner-WekinatorControlCHOP/wiki/Wekinator-Control-CHOP) page of this repository.
 ## Status
 
 This controller is **stable** and used in professional HCI/XR prototyping.  
