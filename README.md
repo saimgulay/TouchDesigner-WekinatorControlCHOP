@@ -69,64 +69,9 @@ Attribution required if forked or integrated into larger tools. See LICENSE file
 
 ---
 
-## 1. Purpose
-
-This Script CHOP enables two-way, socket-level communication between TouchDesigner and Wekinator, allowing:
-
-- Manual or automatic transmission of input features to Wekinator.  
-- Full control over Wekinator’s training and runtime behaviour via OSC.  
-- Real-time retrieval and visualisation of Wekinator’s outputs, including DTW triggers.
-
-It replaces manual GUI interactions in Wekinator and eliminates the need for external OSC tools (e.g. Max/MSP, Processing).
 
 
-
-## 2. Parameters Overview
-
-### General
-- **Sample Rate:** Output rate of the CHOP (Hz).  
-- **Number of Inputs:** Number of input channels to read from the first connected CHOP input.
-
-### OSC Settings
-- **TD Listen Port:** Port to receive messages from Wekinator (default: 12000).  
-- **Wekinator Host IP:** Typically `127.0.0.1`, unless Wekinator runs on another machine.  
-- **Wekinator Listen Port:** Wekinator’s input port (default: 6448).  
-- **Input OSC Address:** Default: `/wek/inputs`  
-- **Main Output OSC Address:** Default: `/wek/outputs`
-
-### Input Sending
-- **Input Sending Mode:**  
-  - *Every Frame:* Automatically sends input each frame.  
-  - *On Pulse:* Sends input only when triggered manually.  
-- **Send Input Now:** Manually sends current input values to Wekinator.
-
-### Control
-- **Record Examples:** Start/stop recording training data (`startRecording`, `stopRecording`).  
-- **Train On/Off:** Trigger training (`train`, `cancelTrain`).  
-- **Run Models:** Start/stop live prediction (`startRunning`, `stopRunning`).  
-- **Cancel Training:** Abort current training process.
-
-### DTW Control
-- **Gesture ID:** Selects DTW class (starting from 1).  
-- **Start DTW Record / Stop DTW Record:** Controls gesture recording.
-
-### Example Management
-- **Delete All Examples:** Clears all examples from Wekinator.  
-- **Target Output Index:** Model index to delete examples for.  
-- **Delete Examples for Output:** Deletes examples for selected output.  
-- **Set Output Values:** Manually specify mock outputs (comma-separated floats).  
-- **Send Output Values Now:** Sends mock outputs to Wekinator GUI.
-
-### Advanced Configuration
-- **Names (CSV):** Input/output names as comma-separated string.  
-- **Set Input Names / Set Output Names:** Applies `setInputNames` / `setOutputNames` (only during setup).  
-- **Model Indices (CSV):** Comma-separated integers (1-based).  
-- **Enable/Disable Model Recording:** Toggles individual model recording.  
-- **Enable/Disable Model Running:** Toggles individual model runtime.
-
----
-
-## 3. How It Works (Execution Flow)
+## 2. How It Works (Execution Flow)
 
 - A UDP socket is created on the TouchDesigner side.  
 - A background thread (`recv_loop()`) listens for Wekinator output.  
@@ -136,14 +81,14 @@ It replaces manual GUI interactions in Wekinator and eliminates the need for ext
 
 ---
 
-## 4. Usage Recommendations
+## 3. Usage Recommendations
 
 ### Initial Setup:
 - Ensure Wekinator is running with *Enable OSC Control of GUI* checked.  
 - Avoid changing ports once training starts.  
 - Match input/output counts between Wekinator and the script.
 
-### 5. Live Usage:
+### 4. Live Usage:
 - Use **Every Frame** mode for real-time prediction.  
 - Use **On Pulse** mode during testing or data collection.  
 - Avoid toggling multiple parameters at once.  
@@ -151,7 +96,7 @@ It replaces manual GUI interactions in Wekinator and eliminates the need for ext
 
 ---
 
-## 6. Output Channels (CHOP Output)
+## 5. Output Channels (CHOP Output)
 
 - **output1, output2, …** → Wekinator primary model outputs (`/wek/outputs`)  
 - **wek_state1, wek_state2, …** → Other OSC addresses translated to CHOP channels  
@@ -159,7 +104,7 @@ It replaces manual GUI interactions in Wekinator and eliminates the need for ext
 
 ---
 
-## 7. Troubleshooting
+## 6. Troubleshooting
 
 | Symptom | Possible Cause | Resolution |
 |--------|----------------|------------|
@@ -170,7 +115,7 @@ It replaces manual GUI interactions in Wekinator and eliminates the need for ext
 
 ---
 
-## 8. Performance Optimisation
+## 7. Performance Optimisation
 
 - Debug prints are disabled in production.  
 - Output is single-sample, non-timesliced.  
@@ -179,7 +124,7 @@ It replaces manual GUI interactions in Wekinator and eliminates the need for ext
 
 ---
 
-## 9. Security and Networking Notes
+## 8. Security and Networking Notes
 
 - Uses **UDP** — connectionless, stateless.  
 - For remote use, ensure port permissions in firewalls.  
@@ -187,7 +132,7 @@ It replaces manual GUI interactions in Wekinator and eliminates the need for ext
 
 ---
 
-## 10. Final Remarks
+## 9. Final Remarks
 
 This system is engineered for:
 
